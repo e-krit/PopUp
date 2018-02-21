@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
-		<title>SlickSlider</title>
+		<title>popUp</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -17,38 +17,32 @@
 			<div class="wrapper">
 				<div class="container">
 					<div class="container__title">
-						<h1>SlickSlider</h1>
+						<h1>popUp</h1>
 					</div>
 					<div class="example">
 						<div class="example__information">
 							<p>Slick slider адаптивный слайдер для сайта. Можно управлять колличеством элементов для каждого необходимого разрешения.</p>
 							<h2>Необходимые файлы для подключения</h2>
-							<p>CSS files:</p>
-							<div class="example__scroll">
-								<pre>
-&lt;!-- styles needed by Slick --&gt;
-&lt;link type="text/css" href="css/slick" rel="stylesheet"/&gt;</pre>
-</div>
-	<p>Js files:</p>
+							<p>Js files:</p>
 <div class="example__scroll">
 	<pre>
 &lt;!-- latest jQuery direct from google's CDN --&gt;
 &lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
 
 &lt;!-- the Slick script --&gt;
-&lt;script type="text/javascript" src="js/slick.min.js"&gt;&lt;/script&gt;</pre>
+&lt;script type="text/javascript" src="js/jquery.blockUI.js"&gt;&lt;/script&gt;</pre>
 							</div>
 							<p>Для корректной работы плагина необходимо скачать и подключить соответствующие файлы. Скачать их можно по соответственным путям <b>скрпиты</b> в папке <b>/js</b>, <b>стили</b> в папке <b>/css</b></p>
 							<p>Так же можно скачать файлы с офицального сайта:
 								<ul>
-									<li><a href="http://kenwheeler.github.io/slick/">SlickSlider</a></li>
+									<li><a href="https://github.com/malsup/blockui">BlockUi</a></li>
 									<li><a href="https://jquery.com">jQuery</a></li>
-									<li><a href="https://github.com/kenwheeler/slick/">github Slick</a></li>
 								</ul>
 							</p>
 							<h2>Иницилизация</h2>
 							<p>Создаем наш popUp:</p>
 							<pre>
+&lt;a href=&quot;#examplePopUp&quot; class=&quot;js-show-popup&quot;&gt;CLICK BUTTON&lt;/a&gt;
 &lt;div id=&quot;examplePopUp&quot; class=&quot;popUpForm hidden-block&quot;&gt;
 	&lt;div class=&quot;popUpForm__block&quot;&gt;
 		&lt;a href=&quot;#&quot; class=&quot;popUpForm__close js-close-form&quot;&gt;&lt;/a&gt;
@@ -92,7 +86,8 @@
 	&lt;/div&gt;
 &lt;/div&gt;
 							</pre>
-							<p><b>сlass="exampleSlider"</b> отвечает за стилизацию<br><b>сlass="js-exampleSlider"</b> отвечает за навешивание плагина</p>
+							<p><b>&lt;a href=&quot;#examplePopUp&quot; class=&quot;js-show-popup&quot;&gt;</b> кнопка открытия формы где a href="#examplePopUp" это id открывающейся формы.</p>
+							<p><b>&lt;div id=&quot;examplePopUp&quot; class=&quot;popUpForm hidden-block&quot;&gt;</b> id - связка с кнопкой.</p>
 							<p>Далее необходимо написать <b>js</b> код для иницилизации плагина.</p>
 							<div class="example__scroll">
 							<pre>
@@ -185,6 +180,8 @@ $(document).keyup(function(e) {
 });
 /*CLOSE FORM*/</pre>
 						</div>
+						<h2>Расположение</h2>
+						<p>Стили для всех форм должны лежать в pop_up.css, а скрипт должен лежать в pop_up.js.</p>
 						<h2>Настройки</h2>
 						<table class="posttb">
 <tbody>
